@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  width: 100vw;
+  min-height: 100%;
+  background-color: rgb(238, 64, 34);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  height: 100%;
+}
+
+.toDoList {
+  width: 400px;
+  min-height: 250px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 8px 8px 20px -10px #000;
+  margin: 100px;
+}
+
+.toDoList>h1 {
+
+  margin: 10px;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input>form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  flex: 1;
+  border: none;
+  margin-right: 10px;
+  border-bottom: 1px solid #333;
+  padding: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+form button {
+  background-color: rgb(238, 64, 34);
   color: white;
+  border-radius: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.toDo {
+  text-align: left;
+  width: 100%;
+  min-height: 30px;
+  padding-left: 10px;
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.toDo:nth-child(2n-1) {
+  background-color: rgb(235, 166, 154);
+}
+
+.toDo:hover {
+  background-color: rgb(231, 88, 78);
+}
+
+.toDo>button {
+  height: 30px;
+  transition: all 0.2s;
+
+}
+
+.toDo>button:hover {
+
+  background-color: rgb(165, 50, 30);
+
 }
